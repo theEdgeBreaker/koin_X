@@ -36,14 +36,17 @@ export default function NavBar() {
             {showMenu ? "✕" : "☰"}
           </button>
 
-          <div className="hidden sm:flex flex-row gap-7 text-base sm:text-lg items-center">
-            <Link href="#" className="black hover:text-gray-700">
+          <div
+            className="hidden sm:flex flex-row gap-7 text-base sm:text-lg items-center"
+            style={{ color: "#0F1629" }}
+          >
+            <Link href="#" className=" hover:text-gray-500">
               Crypto Taxes
             </Link>
-            <Link href="#" className="black hover:text-gray-700">
+            <Link href="#" className=" hover:text-gray-500">
               Free Tools
             </Link>
-            <Link href="#" className="black hover:text-gray-700">
+            <Link href="#" className=" hover:text-gray-500">
               Resource Center
             </Link>
           </div>
