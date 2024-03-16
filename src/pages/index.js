@@ -9,7 +9,7 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Performance from "./components/Performance";
 import dynamic from "next/dynamic";
-import YouMayKnowCarousel from "./components/YouMayKnowCarousel";
+import YouMayLikeCarousel from "./components/YouMayLikeCarousel";
 import TrendingCoinsCarousel from "./components/TrendingCoinsCarousel";
 
 const Sentiment = dynamic(() => import("./components/Sentiment"), {
@@ -27,41 +27,43 @@ const inter = Inter({
 
 export default function Home() {
   return (
-    <div className={`${inter.variable} font-sans`}>
-      <NavBar />
+    <div className=" bg-gray-100">
+      <div className={`${inter.variable} font-sans`}>
+        <NavBar />
 
-      <CoinPage coinId="bitcoin" />
+        <CoinPage coinId="bitcoin" />
 
-      <div className="md:w-4/6">
-        <Tabs />
-      </div>
+        <div className="md:w-4/6">
+          <Tabs />
+        </div>
 
-      <div className="md:w-4/6" id="overview">
-        <Performance />
-      </div>
+        <div className="md:w-4/6" id="overview">
+          <Performance />
+        </div>
 
-      <div className="md:w-4/6" id="sentiments">
-        <Sentiment />
-      </div>
+        <div className="md:w-4/6" id="sentiments">
+          <Sentiment />
+        </div>
 
-      <div className="md:w-4/6" id="news-insights">
-        <About />
-      </div>
+        <div className="md:w-4/6" id="news-insights">
+          <About />
+        </div>
 
-      <div className="md:w-4/6" id="tokenomics">
-        <Tokenomics />
-      </div>
+        <div className="md:w-4/6" id="tokenomics">
+          <Tokenomics />
+        </div>
 
-      <div className="md:w-4/6" id="team">
-        <Team />
-      </div>
+        <div className="md:w-4/6" id="team">
+          <Team />
+        </div>
 
-      <div>
-        <YouMayKnowCarousel />
-      </div>
+        <div>
+          <YouMayLikeCarousel />
+        </div>
 
-      <div>
-        <TrendingCoinsCarousel />
+        <div>
+          <TrendingCoinsCarousel />
+        </div>
       </div>
     </div>
   );
