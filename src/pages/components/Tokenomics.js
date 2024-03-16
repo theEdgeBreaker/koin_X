@@ -26,15 +26,20 @@ const Tokenomics = () => {
   };
 
   return (
-    <div className="bg-emerald-200">
-      <h2>Tokenomics</h2>
-      <h3>Initial Distribution</h3>
-      <div className="bg-blue-400">
-        <div id="chart" style={{ width: "40%" }} className="bg-red-500">
+    <div
+      className="bg-white mt-6 border border-gray-200 rounded-md shadow-md
+    px-7 pt-7 pb-11 ml-12 tracking-wide flex flex-col gap-3"
+    >
+      <h2 className=" text-3xl font-bold text-customBlue">Tokenomics</h2>
+      <h3 className=" text-2xl font-semibold text-charcoalGray pt-6">
+        Initial Distribution
+      </h3>
+      <div>
+        <div id="chart" style={{ width: "46%" }}>
           <ReactApexChart options={options} series={series} type="donut" />
         </div>
       </div>
-      <p>
+      <p className=" text-lg text-greenishGray font-semibold leading-8">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
         amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
