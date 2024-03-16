@@ -29,7 +29,7 @@ const CoinInfo = ({ coinId }) => {
   }, [coinId]);
 
   return (
-    <div className="ml-12">
+    <div className="ml-12 ">
       <div className="text-sm flex flex-row gap-2 py-3">
         <span className=" text-slate-400">Cryptopcurrencies</span>
         <span className=" text-slate-400"> {">>"}</span>
@@ -37,7 +37,7 @@ const CoinInfo = ({ coinId }) => {
       </div>
       <div
         className="border border-gray-200 rounded-md px-5 pt-6 pb-7 shadow-md
-        bg-green-300"
+        bg-white"
         // style={{ width: "63%" }}
       >
         {coinData && priceData && (

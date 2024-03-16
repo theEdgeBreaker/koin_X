@@ -45,7 +45,7 @@ const Sentiment = () => {
   return (
     <div
       className="border border-gray-200 rounded-md shadow-md
-     bg-pink-300 px-7 pt-7 pb-11 ml-12 flex flex-col gap-4"
+     bg-white mt-6 px-7 pt-7 pb-11 ml-12 flex flex-col gap-4"
     >
       <h2 className="text-3xl font-bold text-customBlue pt-2">Sentiment</h2>
 
