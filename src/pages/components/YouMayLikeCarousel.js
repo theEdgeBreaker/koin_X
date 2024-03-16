@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function TrendingCoinsCarousel() {
+function YouMayLikeCarousel() {
   const [trendingCoins, setTrendingCoins] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
@@ -49,8 +49,8 @@ function TrendingCoinsCarousel() {
   };
 
   return (
-    <div className=" px-5 pt-6 pb-24 bg-white">
-      <div className="overflow-hidden ml-8 mr-8 relative ">
+    <div className=" px-5 pt-6 pb-7 mt-24 bg-white">
+      <div className="overflow-hidden mt-16 ml-8 mr-8 relative ">
         {showLeftButton && (
           <div className="absolute left-0  top-1/2  z-50">
             <button
@@ -72,7 +72,7 @@ function TrendingCoinsCarousel() {
           </div>
         )}
         <h2 className="text-3xl font-bold text-darkGraphite mb-8">
-          Trending Coins
+          You May Also Like
         </h2>
         <div
           className="carousel-container flex flex-row gap-4  "
@@ -139,4 +139,4 @@ function TrendingCoinsCarousel() {
   );
 }
 
-export default TrendingCoinsCarousel;
+export default YouMayLikeCarousel;
