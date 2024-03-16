@@ -64,13 +64,13 @@ import GetStartedCard from "./components/GetStartedCard";
 const CoinPage = ({ coinId }) => {
   return (
     <div className="flex flex-col justify-between h-screen md:flex-row">
-      <div className="md:w-4/6 bg-blue-300">
+      <div className="md:w-4/6 ">
         <CoinInfo coinId={coinId} />
       </div>
       {/* <div className="md:w-2/6 bg-red-300 md:self-end">
         <GetStartedCard />
       </div> */}
-      <div className="w-full lg:w-2/6 bg-red-300">
+      <div className="w-full lg:w-2/6">
         <GetStartedCard />
       </div>
     </div>
