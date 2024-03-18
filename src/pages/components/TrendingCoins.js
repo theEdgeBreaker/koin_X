@@ -23,7 +23,8 @@ export default function TrendingCoins() {
 
   return (
     <div
-      className="border border-gray-200 bg-white rounded-md px-5 py-7  shadow-md"
+      className="border border-gray-200 bg-white rounded-md px-5 py-7 
+      md:ml-6 md:mr-6 lg:ml-5 lg:mr-12 shadow-md"
       // style={{ width: "27%" }}
     >
       <h3 className="pb-2 text-3xl font-bold" style={{ color: "#0F1629" }}>
