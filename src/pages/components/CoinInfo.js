@@ -29,21 +29,25 @@ const CoinInfo = ({ coinId }) => {
   }, [coinId]);
 
   return (
-    <div className="ml-12 ">
-      <div className="text-sm flex flex-row gap-2 py-3">
+    <div className=" ml-5 mr-5 md:ml-6 md:mr-6 lg:ml-12 ">
+      <div className="text-sm flex flex-row gap-2 pt-5 pb-14 md:py-3">
         <span className=" text-slate-400">Cryptopcurrencies</span>
         <span className=" text-slate-400"> {">>"}</span>
         {coinData && <span className="font-semibold">{coinData.name}</span>}
       </div>
       <div
         className="border border-gray-200 rounded-md px-5 pt-6 pb-7 shadow-md
-        bg-white"
-        // style={{ width: "63%" }}
+        bg-white relative"
       >
         {coinData && priceData && (
           <div className="flex flex-col gap-5 items-start">
             <div className="flex flex-col gap-8">
-              <div className="flex flex-row gap-8 items-center">
+              {/* <div className="flex flex-row gap-8 items-center bg-green-300"> */}
+              <div
+                className="flex flex-row gap-6 items-center absolute 
+              inset-x-0 bottom-full  md:relative md:bottom-auto 
+              md:flex-nowrap md:gap-8 pb-4 "
+              >
                 <div className="flex flex-row gap-2 items-center">
                   {coinData.image && (
                     <img
@@ -54,13 +58,13 @@ const CoinInfo = ({ coinId }) => {
                     />
                   )}
                   <h1
-                    className=" font-bold text-3xl"
+                    className=" font-bold text-lg md:text-3xl"
                     style={{ color: "#0B1426" }}
                   >
                     {coinData.name}
                   </h1>
                   <p
-                    className="text-xl font-semibold "
+                    className=" text-sm md:text-xl font-semibold "
                     style={{ color: "#5D667B" }}
                   >
                     {coinData.symbol.toUpperCase()}
@@ -69,7 +73,8 @@ const CoinInfo = ({ coinId }) => {
 
                 <div>
                   <p
-                    className=" text-white px-2 py-1.5 rounded-md text-lg"
+                    className=" text-white px-1 sm:px-2 py-0.5 sm:py-1.5 rounded-sm sm:rounded-md 
+                    text-md sm:text-lg "
                     style={{ backgroundColor: "#808A9D" }}
                   >
                     Rank #{coinData.market_cap_rank}
@@ -80,23 +85,20 @@ const CoinInfo = ({ coinId }) => {
               <div className="flex flex-col gap-2">
                 <div className="flex flex-row gap-3 items-center">
                   <div className="flex flex-row gap-6 items-center">
-                    <span
-                      className="text-4xl font-bold"
-                      style={{ color: "#0B1426" }}
-                    >
+                    <span className="  text-3xl md:text-4xl font-bold text-deepMidnightBlue">
                       &#x24;{priceData[coinId].usd}
                     </span>
                     <span
-                      className={`text-lg px-1 py-0.5 rounded-sm ${
+                      className={` text-sm sm:text-lg px-2 py-0.5 rounded-sm ${
                         parseFloat(priceData[coinId].usd_24h_change) >= 0
                           ? "text-green-700 bg-green-100"
                           : "text-red-600 bg-red-100"
                       }`}
                     >
                       {parseFloat(priceData[coinId].usd_24h_change) >= 0 ? (
-                        <span className="text-sm">&#9650; </span>
+                        <span className=" text-xs sm:text-sm">&#9650; </span>
                       ) : (
-                        <span className="text-sm">&#9660; </span>
+                        <span className="text-xs sm:text-sm">&#9660; </span>
                       )}
                       {Math.abs(
                         parseFloat(priceData[coinId].usd_24h_change)
@@ -105,14 +107,14 @@ const CoinInfo = ({ coinId }) => {
                     </span>
                   </div>
 
-                  <span className="text-lg" style={{ color: "#768396" }}>
+                  <span
+                    className=" text-sm sm:text-lg"
+                    style={{ color: "#768396" }}
+                  >
                     (24H)
                   </span>
                 </div>
-                <p
-                  className="text-xl font-semibold"
-                  style={{ color: "#0B1426" }}
-                >
+                <p className=" text-lg sm:text-xl font-semibold text-deepMidnightBlue">
                   &#8377; {priceData[coinId].inr}
                 </p>
               </div>
