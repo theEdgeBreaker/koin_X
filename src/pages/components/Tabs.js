@@ -12,7 +12,7 @@ function Tabs() {
     <div
       className="flex flex-row gap-12 border-b-2 border-gray-300 font-semibold 
       text-sm lg:text-lg pt-14 ml-5 mr-5 md:ml-6 md:mr-6 lg:ml-12 overflow-x-auto
-      text-gitgreenishGray"
+      text-greenishGray"
       // style={{
       //   color: "#3E424A",
       //   WebkitOverflowScrolling: "touch",
