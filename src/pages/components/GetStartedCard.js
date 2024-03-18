@@ -4,9 +4,11 @@ import TrendingCoins from "./TrendingCoins";
 
 function GetStartedCard() {
   return (
-    <div className=" flex flex-col gap-4  pt-11 ml-5 mr-12">
+    <div className=" flex flex-col gap-10 md:gap-6 lg:gap-4 ">
       <div
-        className="py-8 px-12 rounded-2xl"
+        // className="py-8 px-12 rounded-2xl"
+        className="pt-11 py-8 px-12 ml-5 mr-5 md:ml-6 
+      md:mr-6 lg:ml-5 lg:mr-12 rounded-xl md:rounded-2xl"
         // width: "27%",
         style={{ backgroundColor: "#0052FE" }}
       >
