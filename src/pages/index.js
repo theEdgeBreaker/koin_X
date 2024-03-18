@@ -11,6 +11,7 @@ import Performance from "./components/Performance";
 import dynamic from "next/dynamic";
 import YouMayLikeCarousel from "./components/YouMayLikeCarousel";
 import TrendingCoinsCarousel from "./components/TrendingCoinsCarousel";
+import GetStartedCard from "./components/GetStartedCard";
 
 const Sentiment = dynamic(() => import("./components/Sentiment"), {
   ssr: false,
@@ -27,43 +28,55 @@ const inter = Inter({
 
 export default function Home() {
   return (
-    <div className=" bg-gray-100">
-      <div className={`${inter.variable} font-sans`}>
-        <NavBar />
+    <div
+      className={`${inter.variable} font-sans bg-gray-100 relative  `}
+      style={{ width: "100%" }}
+    >
+      <NavBar />
 
-        <CoinPage coinId="bitcoin" />
+      <CoinPage coinId="bitcoin" />
 
-        <div className="md:w-4/6">
-          <Tabs />
-        </div>
+      {/* <div
+        className="w-full bg-red-500 absolute bottom-0 translate-y-full 
+        md:top-24 md:w-2/6 right-0"
+      >
+        <GetStartedCard />
+      </div> */}
 
-        <div className="md:w-4/6" id="overview">
-          <Performance />
-        </div>
+      <div className="w-full lg:w-4/6 ">
+        <Tabs />
+      </div>
 
-        <div className="md:w-4/6" id="sentiments">
-          <Sentiment />
-        </div>
+      <div className="w-full lg:w-4/6 " id="overview">
+        <Performance />
+      </div>
 
-        <div className="md:w-4/6" id="news-insights">
-          <About />
-        </div>
+      <div className="w-full lg:w-4/6" id="sentiments">
+        <Sentiment />
+      </div>
 
-        <div className="md:w-4/6" id="tokenomics">
-          <Tokenomics />
-        </div>
+      <div className="w-full lg:w-4/6" id="news-insights">
+        <About />
+      </div>
 
-        <div className="md:w-4/6" id="team">
-          <Team />
-        </div>
+      <div className="w-full lg:w-4/6" id="tokenomics">
+        <Tokenomics />
+      </div>
 
-        <div>
-          <YouMayLikeCarousel />
-        </div>
+      <div className="w-full lg:w-4/6" id="team">
+        <Team />
+      </div>
 
-        <div>
-          <TrendingCoinsCarousel />
-        </div>
+      <div>
+        <YouMayLikeCarousel />
+      </div>
+
+      <div>
+        <TrendingCoinsCarousel />
+      </div>
+
+      <div className="w-full bg-red-500 lg:w-2/6 absolute lg:top-36 lg:right-0">
+        <GetStartedCard />
       </div>
     </div>
   );
