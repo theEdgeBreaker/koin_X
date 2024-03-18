@@ -10,9 +10,34 @@ function Tabs() {
 
   return (
     <div
-      className="flex flex-row gap-12 border-b-2 border-gray-300 ml-12 font-semibold text-lg pt-14"
-      style={{ color: "#3E424A" }}
+      className="flex flex-row gap-12 border-b-2 border-gray-300 font-semibold 
+      text-sm lg:text-lg pt-14 ml-5 mr-5 md:ml-6 md:mr-6 lg:ml-12 overflow-x-auto
+      text-gitgreenishGray"
+      // style={{
+      //   color: "#3E424A",
+      //   WebkitOverflowScrolling: "touch",
+      //   scrollbarWidth: "none",
+      //   msOverflowStyle: "none",
+      // }}
     >
+      {/* <style jsx>{`
+        .scroll-container::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style> */}
+
+      <style jsx>{`
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      `}</style>
       <div>
         <Link href="#overview" smooth={true} duration={500}>
           <div
@@ -51,7 +76,7 @@ function Tabs() {
             }`}
             onClick={() => handleSetActive("#news-insights")}
           >
-            News Insights
+            <span>News&nbsp;Insights</span>
           </div>
         </Link>
       </div>
