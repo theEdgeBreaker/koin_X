@@ -1,8 +1,24 @@
 import React from "react";
-import ReactApexChart from "react-apexcharts";
+// import ReactApexChart from "react-apexcharts";
 import SentimentCarousel from "./SentimentCarousel";
 
 const Sentiment = () => {
+  // ------------change made from here--------------
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing on the server-side
+  }
+
+  const ReactApexChart = require("react-apexcharts").default;
+
+  // -------till here-----------------
+
   const series = [
     {
       data: [76, 8, 16],
