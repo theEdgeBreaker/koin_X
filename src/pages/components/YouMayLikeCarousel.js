@@ -15,8 +15,8 @@ function YouMayLikeCarousel() {
         if (response.ok) {
           const data = await response.json();
           setTrendingCoins(data.coins);
-          setShowLeftButton(false); // Initially hide left button
-          setShowRightButton(data.coins.length > 1); // Show right button if there are more than one card
+          setShowLeftButton(false);
+          setShowRightButton(data.coins.length > 1);
         } else {
           throw new Error("Failed to fetch trending coins");
         }
@@ -32,8 +32,8 @@ function YouMayLikeCarousel() {
     setCurrentIndex((prevIndex) => {
       const newIndex =
         prevIndex === trendingCoins.length - 1 ? 0 : prevIndex + 1;
-      setShowLeftButton(true); // Always show left button when navigating
-      setShowRightButton(newIndex !== trendingCoins.length - 1); // Update visibility of right button
+      setShowLeftButton(true);
+      setShowRightButton(newIndex !== trendingCoins.length - 1);
       return newIndex;
     });
   };
@@ -42,19 +42,19 @@ function YouMayLikeCarousel() {
     setCurrentIndex((prevIndex) => {
       const newIndex =
         prevIndex === 0 ? trendingCoins.length - 1 : prevIndex - 1;
-      setShowRightButton(true); // Always show right button when navigating
-      setShowLeftButton(newIndex !== 0); // Update visibility of left button
+      setShowRightButton(true);
+      setShowLeftButton(newIndex !== 0);
       return newIndex;
     });
   };
 
   return (
-    <div className=" px-5 pt-6 pb-7 mt-24 bg-white">
-      <div className="overflow-hidden mt-16 ml-8 mr-8 relative ">
+    <div className=" md:px-5 md:pt-6 pb-12 md:pb-7 md:mt-24  ">
+      <div className="overflow-hidden mt-8 md:mt-16 md:ml-8 md:mr-8 relative ">
         {showLeftButton && (
           <div className="absolute left-0  top-1/2  z-50">
             <button
-              className="bg-white rounded-full px-3 py-2 shadow-md"
+              className="bg-white rounded-full px-2 md:px-3 py-1 md:py-2 shadow-md"
               onClick={handlePrev}
             >
               {"<"}
@@ -64,18 +64,18 @@ function YouMayLikeCarousel() {
         {showRightButton && (
           <div className="absolute right-0 top-1/2 transform  z-50">
             <button
-              className="bg-white rounded-full px-3 py-2 shadow-md"
+              className="bg-white rounded-full px-2 md:px-3 py-1 md:py-2 shadow-md"
               onClick={handleNext}
             >
               {">"}
             </button>
           </div>
         )}
-        <h2 className="text-3xl font-bold text-darkGraphite mb-8">
+        <h2 className=" text-xl md:text-3xl font-bold text-darkGraphite md:mb-8">
           You May Also Like
         </h2>
         <div
-          className="carousel-container flex flex-row gap-4  "
+          className="carousel-container flex flex-row gap-2 md:gap-4  "
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
             transition: "transform 0.5s ease",
@@ -84,18 +84,20 @@ function YouMayLikeCarousel() {
           {trendingCoins.map((coin, index) => (
             <div
               key={coin.item.id}
-              className="coin-card  bg-white rounded-lg py-4 pl-8 pr-40 flex flex-col 
-                 border border-gray-200 shadow-md gap-3 w-96 "
+              className="coin-card  bg-white rounded-lg py-2 md:py-4 
+              pl-2 md:pl-8 pr-10 md:pr-40 flex flex-col 
+              border border-gray-200 shadow-md gap-1 md:gap-3
+              w-44 h-28 md:h-52 md:w-96 "
             >
               <div className="flex felx-row gap-2 items-center">
                 <img
                   src={coin.item.thumb}
                   alt={coin.item.name}
-                  className="h-8 w-16 mx-auto"
+                  className=" h-6 w-6 md:h-8 md:w-16 mx-auto"
                 />
 
-                <div className="flex flex-row">
-                  <p className="font-semibold text-darkGraphite text-lg">
+                <div className="flex flex-row items-center">
+                  <p className="font-semibold text-darkGraphite text-xs md:text-lg">
                     {coin.item.symbol}
                   </p>
 
@@ -108,7 +110,7 @@ function YouMayLikeCarousel() {
                       coin.item.data.price_change_percentage_24h.usd <= 0
                         ? "red-100"
                         : "green-100"
-                    } rounded-sm text-sm h-7 p-1`}
+                    } rounded-sm text-xs md:text-sm h-4 md:h-7  md:p-1`}
                   >
                     {coin.item.data.price_change_percentage_24h.usd >= 0
                       ? "+"
@@ -119,7 +121,7 @@ function YouMayLikeCarousel() {
               </div>
 
               <div className="text-center">
-                <p className="text-darkCharcoal text-2xl font-semibold">
+                <p className="text-darkCharcoal text-sm md:text-2xl font-semibold">
                   {/[a-zA-Z]/.test(coin.item.data.price)
                     ? "NAN"
                     : coin.item.data.price}
@@ -128,7 +130,7 @@ function YouMayLikeCarousel() {
                 <img
                   src={coin.item.data.sparkline}
                   alt={coin.item.name}
-                  className="h-24"
+                  className=" h-10 md:h-24"
                 />
               </div>
             </div>
