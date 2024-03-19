@@ -1,11 +1,7 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
-// import ReactApexChart from "react-apexcharts";
 import SentimentCarousel from "./SentimentCarousel";
 
 const Sentiment = () => {
-  // ------------change made from here--------------
-
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -17,8 +13,6 @@ const Sentiment = () => {
   }
 
   const ReactApexChart = require("react-apexcharts").default;
-
-  // -------till here-----------------
 
   const series = [
     {

@@ -1,6 +1,4 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
-// import ReactApexChart from "react-apexcharts";
 
 const Tokenomics = () => {
   const [isClient, setIsClient] = useState(false);
