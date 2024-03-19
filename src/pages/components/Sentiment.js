@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useEffect, useState } from "react";
 // import ReactApexChart from "react-apexcharts";
 import SentimentCarousel from "./SentimentCarousel";
 

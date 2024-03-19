@@ -1,7 +1,20 @@
-import React from "react";
-import ReactApexChart from "react-apexcharts";
+// import React from "react";
+import React, { useEffect, useState } from "react";
+// import ReactApexChart from "react-apexcharts";
 
 const Tokenomics = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing on the server-side
+  }
+
+  const ReactApexChart = require("react-apexcharts").default;
+
   const series = [80, 20];
   const labels = ["Crowdsale investors: 80%", "Foundation: 20%"];
 
@@ -37,7 +50,7 @@ const Tokenomics = () => {
           Initial Distribution
         </h3>
         <div>
-          <div id="chart" style={{ width: "46%" }}>
+          <div id="chart" style={{ width: "40%" }}>
             <ReactApexChart options={options} series={series} type="donut" />
           </div>
         </div>
