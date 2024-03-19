@@ -26,7 +26,6 @@ const Sentiment = () => {
         dataLabels: {
           position: "top",
         },
-        // barWidth: "100%", // Adjust the width of the bars
       },
     },
 
@@ -45,15 +44,18 @@ const Sentiment = () => {
   return (
     <div
       className="border border-gray-200 rounded-md shadow-md
-     bg-white mt-6 px-7 pt-7 pb-11 ml-12 flex flex-col gap-4"
+     bg-white mt-6 px-2 md:px-7 pt-1 md:pt-7 pb-11 flex flex-col gap-4
+     ml-3 mr-3 md:ml-6 md:mr-6 lg:ml-12"
     >
-      <h2 className="text-3xl font-bold text-customBlue pt-2">Sentiment</h2>
+      <h2 className=" text-2xl md:text-3xl font-bold text-customBlue pt-2">
+        Sentiment
+      </h2>
 
       <div className="flex flex-row gap-2 items-center">
-        <span className="text-2xl font-semibold text-customDarkBlue">
+        <span className=" text-lg md:text-2xl font-semibold text-customDarkBlue">
           Key Events
         </span>
-        <span className="bg-gray-500 px-2 text-sm rounded-full text-white">
+        <span className="bg-gray-500 px-1.5 md:px-2 text-xs md:text-sm rounded-full text-white">
           i
         </span>
       </div>
@@ -61,18 +63,18 @@ const Sentiment = () => {
       <SentimentCarousel />
 
       <div className="flex flex-row gap-2 items-center pt-5">
-        <span className="text-2xl font-semibold text-customDarkBlue">
+        <span className=" text-xl md:text-2xl font-semibold text-customDarkBlue">
           Analyst Estimates
         </span>
-        <span className="bg-gray-500 px-2 text-sm rounded-full text-white">
+        <span className="bg-gray-500 px-1.5 md:px-2 text-xs md:text-sm rounded-full text-white">
           i
         </span>
       </div>
 
-      <div className="flex flex-row gap-24 items-center">
+      <div className="flex flex-row md:gap-20 lg:gap-24 items-center">
         <div
-          className=" text-4xl bg-green-200 text-green-500 flex items-center
-         px-8 h-36 rounded-full "
+          className="text-3xl md:text-4xl bg-green-200 text-green-500 flex items-center
+         px-8 h-32 md:h-36 rounded-full "
         >
           76%
         </div>
