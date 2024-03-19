@@ -87,7 +87,7 @@ function Performance() {
           </div>
 
           <div className="flex flex-col font-semibold">
-            <div className="flex flex-row gap-40 md:gap-44  justify-between  border-b-2 py-4 border-gray-400 text-slateGray">
+            <div className="flex flex-row gap-24 md:gap-44  justify-between  border-b-2 py-4 border-gray-400 text-slateGray">
               <span>Market&nbsp;Cap</span>
               <span className="pr-4 text-eerieBlack">$323,507,290,047</span>
             </div>
