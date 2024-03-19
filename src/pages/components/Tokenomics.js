@@ -26,29 +26,32 @@ const Tokenomics = () => {
   };
 
   return (
-    <div
-      className="bg-white mt-6 border border-gray-200 rounded-md shadow-md
-    px-7 pt-7 pb-11 ml-12 tracking-wide flex flex-col gap-3"
-    >
-      <h2 className=" text-3xl font-bold text-customBlue">Tokenomics</h2>
-      <h3 className=" text-2xl font-semibold text-charcoalGray pt-6">
-        Initial Distribution
-      </h3>
-      <div>
-        <div id="chart" style={{ width: "46%" }}>
-          <ReactApexChart options={options} series={series} type="donut" />
+    <div className="hidden md:block">
+      <div
+        className=" bg-white mt-6 border border-gray-200 rounded-md shadow-md
+    px-7 pt-7 pb-11 tracking-wide flex flex-col gap-3
+    ml-5 mr-5 md:ml-6 md:mr-6 lg:ml-12"
+      >
+        <h2 className=" text-3xl font-bold text-customBlue">Tokenomics</h2>
+        <h3 className=" text-2xl font-semibold text-charcoalGray pt-6">
+          Initial Distribution
+        </h3>
+        <div>
+          <div id="chart" style={{ width: "46%" }}>
+            <ReactApexChart options={options} series={series} type="donut" />
+          </div>
         </div>
+        <p className=" text-lg text-greenishGray font-semibold leading-8">
+          Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
+          vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
+          amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
+          eu fusce adipiscing. Volutpat ultrices nibh sodales massa habitasse
+          urna felis augue. Gravida aliquam fermentum augue eu. Imperdiet
+          bibendum amet aliquam donec. Eget justo dui metus odio rutrum. Vel
+          ipsum eget in at curabitur sem posuere facilisis vitae. Sed lorem sit
+          mauris id eget arcu ut. Vulputate ipsum aliquet odio nisi eu ac risus.
+        </p>
       </div>
-      <p className=" text-lg text-greenishGray font-semibold leading-8">
-        Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
-        vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
-        amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
-        eu fusce adipiscing. Volutpat ultrices nibh sodales massa habitasse urna
-        felis augue. Gravida aliquam fermentum augue eu. Imperdiet bibendum amet
-        aliquam donec. Eget justo dui metus odio rutrum. Vel ipsum eget in at
-        curabitur sem posuere facilisis vitae. Sed lorem sit mauris id eget arcu
-        ut. Vulputate ipsum aliquet odio nisi eu ac risus.
-      </p>
     </div>
   );
 };
