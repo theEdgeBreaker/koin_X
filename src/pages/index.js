@@ -36,13 +36,6 @@ export default function Home() {
 
       <CoinPage coinId="bitcoin" />
 
-      {/* <div
-        className="w-full bg-red-500 absolute bottom-0 translate-y-full 
-        md:top-24 md:w-2/6 right-0"
-      >
-        <GetStartedCard />
-      </div> */}
-
       <div className="w-full lg:w-4/6 ">
         <Tabs />
       </div>
@@ -67,15 +60,15 @@ export default function Home() {
         <Team />
       </div>
 
-      <div>
+      <div className="hidden sm:block">
         <YouMayLikeCarousel />
       </div>
 
-      <div>
+      <div className="hidden sm:block">
         <TrendingCoinsCarousel />
       </div>
 
-      <div className="w-full bg-red-500 lg:w-2/6 absolute lg:top-36 lg:right-0">
+      <div className="w-full lg:w-2/6 absolute lg:top-36 lg:right-0">
         <GetStartedCard />
       </div>
     </div>
