@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import TradingViewChart from "./TradingViewChart";
-// import GetStartedCard from "./GetStartedCard";
 
 const CoinInfo = ({ coinId }) => {
   const [coinData, setCoinData] = useState(null);
@@ -29,7 +28,7 @@ const CoinInfo = ({ coinId }) => {
   }, [coinId]);
 
   return (
-    <div className=" ml-5 mr-5 md:ml-6 md:mr-6 lg:ml-12 ">
+    <div className=" ml-3 mr-3 md:ml-6 md:mr-6 lg:ml-12 ">
       <div className="text-sm flex flex-row gap-2 pt-5 pb-14 md:py-3">
         <span className=" text-slate-400">Cryptopcurrencies</span>
         <span className=" text-slate-400"> {">>"}</span>
@@ -42,7 +41,6 @@ const CoinInfo = ({ coinId }) => {
         {coinData && priceData && (
           <div className="flex flex-col gap-5 items-start">
             <div className="flex flex-col gap-8">
-              {/* <div className="flex flex-row gap-8 items-center bg-green-300"> */}
               <div
                 className="flex flex-row gap-6 items-center absolute 
               inset-x-0 bottom-full  md:relative md:bottom-auto 
@@ -120,31 +118,12 @@ const CoinInfo = ({ coinId }) => {
               </div>
             </div>
 
-            {/* TradingViewChart Imported */}
-
-            {/* <TradingViewChart symbol={`${coinId.toUpperCase()}USD`} /> */}
-            {/* <div>
-              <TradingViewChart key={Date.now()} />
-            </div> */}
-            {/* <TradingViewChart coinId={coinId} /> */}
-            {/* <div height={590}>
-              <TradingViewChart />
-            </div> */}
-            {/* <Image src="/frame.svg" alt="Frame Logo" width={590} height={24} /> */}
             <TradingViewChart />
           </div>
         )}
       </div>
-
-      {/* GetStartedCard Imported */}
-
-      {/* <div>
-        <GetStartedCard />
-      </div> */}
     </div>
   );
 };
 
 export default CoinInfo;
-
-// ================================
